@@ -134,6 +134,7 @@
     </form>
 
     <h2>My Expenses</h2>
+    <h3 id="total">Total: 0.00</h3>
 
     <div id="expenses"></div>
 
@@ -253,6 +254,17 @@
         }
 
         loadExpenses();
+        function updateTotal(expenses) {
+    const total = expenses.reduce(
+        (sum, expense) => sum + expense.amount,
+        0
+        const expenses = await response.json();
+        updateTotal(expenses);
+    );
+
+    document.getElementById("total").textContent =
+        `Total: ${total.toFixed(2)}`;
+}
     </script>
 
 </body>
